@@ -49,11 +49,11 @@ services:
       - traefik.http.services.odoo-longpolling.loadbalancer.server.port=8072
       - traefik.http.routers.odoo-longpolling.entrypoints=websecure
       - traefik.http.routers.odoo-longpolling.tls.certresolver=letsencrypt
-    logging:
-      driver: json-file
-      options:
-        max-size: 10m
-        max-file: "3"
+#    logging:
+#      driver: json-file
+#      options:
+#        max-size: 10m
+#        max-file: "3"
     healthcheck:
       test: "[\"CMD\", \"curl\", \"-f\", \"http://localhost:8069/web/health\"]"
       interval: 30s
