@@ -115,7 +115,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: 9Xsb64kZq5TZ3tLvxPrFHP*858PvjFX*
       PGADMIN_LISTEN_PORT: "5050"
     ports:
-      - "\"5050:5050\""
+      - "5050:5050"
     depends_on:
       postgres:
         condition: service_started
